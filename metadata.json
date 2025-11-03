@@ -1,0 +1,5 @@
+{
+  "name": "Super TaskFlow",
+  "description": "A lightweight workspace to track artisan tasks across departments with performance analytics and a live Gantt view. Manage workflows, view dashboards, and adjust timelines with a drag-and-drop interface.",
+  "requestFramePermissions": []
+}

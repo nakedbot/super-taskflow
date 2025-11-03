@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super TaskFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+             colors: {
+              // A more muted and professional palette
+              'primary': {
+                '50': '#eff6ff',
+                '100': '#dbeafe',
+                '200': '#bfdbfe',
+                '300': '#93c5fd',
+                '400': '#60a5fa',
+                '500': '#3b82f6',
+                '600': '#2563eb',
+                '700': '#1d4ed8',
+                '800': '#1e40af',
+                '900': '#1e3a8a',
+              },
+              'priority-critical': '#fecaca', // red-200
+              'priority-critical-text': '#b91c1c', // red-700
+              'priority-medium': '#fed7aa', // orange-200
+              'priority-medium-text': '#c2410c', // orange-700
+              'department-carpentry': '#a3e635', // lime-400
+              'department-upholstery': '#67e8f9', // cyan-300
+              'department-cabinetry': '#d8b4fe', // purple-300
+              'department-spraying': '#fde047', // yellow-300
+            },
+            animation: {
+              'slide-in-right': 'slideInFromRight 0.3s ease-out forwards',
+              'slide-out-right': 'slideOutToRight 0.3s ease-out forwards',
+              'slide-in-left': 'slideInFromLeft 0.3s ease-out forwards',
+              'slide-out-left': 'slideOutToLeft 0.3s ease-out forwards',
+              'fade-in': 'fadeIn 0.3s ease-out forwards',
+              'fade-out': 'fadeOut 0.3s ease-out forwards',
+            },
+            keyframes: {
+              slideInFromRight: { '0%': { transform: 'translateX(100%)' }, '100%': { transform: 'translateX(0)' } },
+              slideOutToRight: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(100%)' } },
+              slideInFromLeft: { '0%': { transform: 'translateX(-100%)' }, '100%': { transform: 'translateX(0)' } },
+              slideOutToLeft: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-100%)' } },
+              fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+              fadeOut: { '0%': { opacity: 1 }, '100%': { opacity: 0 } },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 dark:bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
